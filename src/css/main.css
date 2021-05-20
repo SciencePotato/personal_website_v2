@@ -1,0 +1,433 @@
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+body ::selection {
+  background-color: #272727;
+  color: #EAE7DC;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  transform: translate(-10px, 0px);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #4f91e8;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E85A4F;
+  border: 1px solid #e8a74f;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  transition: all 0.3s ease-in;
+  background: #1b1b1b;
+}
+
+header {
+  z-index: 2;
+  color: #E85A4F;
+  position: fixed;
+  display: grid;
+  width: auto;
+  user-select: none;
+  background-color: #EAE7DC;
+}
+header div:first-of-type {
+  z-index: 2;
+  width: 100%;
+  height: 0.4vh;
+  transition: all 0.1s ease-out;
+  background-color: #E85A4F;
+  transform: translate(-100%, 0%);
+}
+header div:nth-of-type(2) {
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  margin: 0;
+  color: #E85A4F;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 1vh;
+}
+header div:nth-of-type(2) a {
+  color: #E85A4F;
+}
+header div:nth-of-type(2) :hover {
+  color: #e8a74f;
+  transition: all 0.3s ease-in-out;
+}
+header div:nth-of-type(2) a {
+  transition: all 0.3s ease-in-out;
+  flex: 1;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  font-family: "Permanent marker";
+  font-style: bold;
+}
+header div:last-of-type {
+  width: 100vw;
+  position: relative;
+}
+header div:last-of-type svg {
+  position: absolute;
+  transform: all 0.3s ease-out;
+  left: 50%;
+  fill: #E85A4F;
+  opacity: 0;
+}
+
+main {
+  height: 100vh;
+  position: relative;
+  display: grid;
+  transition: all 0.3s ease-out;
+  user-select: none;
+  background-color: #EAE7DC;
+}
+main :hover.myName span:nth-of-type(5) {
+  transform: translate(0%, 0%);
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+main :hover.myName span:first-of-type {
+  transform: translate(0%, 0%);
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+main .move .moveMain {
+  transform: translate(0%, 0%);
+}
+main .myName {
+  place-self: center;
+  display: grid;
+  grid-template: auto 1fr auto/auto 1fr auto;
+  color: #E85A4F;
+  height: auto;
+  width: auto;
+}
+main .myName span:first-of-type {
+  grid-column: 1/4;
+  height: 3px;
+  transform: translate(100%, 0%);
+  width: 0%;
+  background-color: #4f91e8;
+}
+main .myName span:nth-of-type(2) {
+  font-family: "Dancing Script";
+  grid-column: 1/4;
+  font-size: 7.5rem;
+  letter-spacing: 0.25rem;
+  text-align: center;
+  font-weight: bold;
+}
+main .myName span:nth-of-type(3) {
+  font-size: 3rem;
+  grid-column: 1/2;
+  line-height: 0.5;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: center;
+  font-family: "Permanent Marker";
+}
+main .myName span:nth-of-type(4) {
+  grid-column: 2/4;
+  font-size: 12.5rem;
+  line-height: 0.75;
+  font-family: "Acme";
+}
+main .myName span:nth-of-type(5) {
+  grid-column: 1/4;
+  background-color: #4f91e8;
+  height: 3px;
+  transform: translate(-100%, 0%);
+  width: 0%;
+}
+main .myName span:last-of-type {
+  grid-column: 1/4;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+main .myName span:last-of-type a {
+  padding-top: 1rem;
+  flex: 1;
+}
+main .myName span:last-of-type a :hover {
+  background-color: #afafaf;
+  transition: all 0.3s linear;
+}
+main .myName span:last-of-type a :hover svg {
+  fill: #a3d3ff;
+}
+main .myName span:last-of-type a section {
+  border-radius: 10px;
+  text-align: center;
+}
+
+.timeGap {
+  height: 35vh;
+  background-color: #EAE7DC;
+}
+
+.timeContain {
+  padding: 10rem 0rem;
+  width: 100%;
+  height: auto;
+  background-color: #EAE7DC;
+}
+.timeContain .timeline {
+  position: relative;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+.timeContain .timeline::after {
+  content: " ";
+  position: absolute;
+  width: 2px;
+  background-color: #E85A4F;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+.timeContain .timeline .side {
+  text-align: center;
+  position: relative;
+  background: inherit;
+  padding: 25px 0px;
+  width: 50%;
+}
+.timeContain .timeline .side .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #4f91e8;
+}
+.timeContain .timeline .side .content {
+  padding: 30px 90px 30px 30px;
+  position: relative;
+}
+.timeContain .timeline .side .content h2 {
+  color: #4f91e8;
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  font-weight: normal;
+  font-weight: bold;
+}
+.timeContain .timeline .side .content p {
+  color: #E85A4F;
+  margin: 0px;
+  font-size: 1.2rem;
+  line-height: 22px;
+}
+.timeContain .timeline .side::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -10px;
+  background-color: #EAE7DC;
+  border: 2px solid #E85A4F;
+  border-radius: 15px;
+  z-index: 1;
+}
+.timeContain .timeline .side::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% + 1px);
+  right: 10px;
+  background: #4f91e8;
+}
+.timeContain .timeline .left {
+  left: 0;
+}
+.timeContain .timeline .left .date {
+  right: -150px;
+}
+.timeContain .timeline .right {
+  left: 50%;
+  padding: 0px 30px;
+}
+.timeContain .timeline .right .date {
+  left: -150px;
+}
+.timeContain .timeline .right::after {
+  left: -10px;
+}
+.timeContain .timeline .right::before {
+  left: 8px;
+}
+
+.myProject {
+  background-color: #EAE7DC;
+  color: #E85A4F;
+  height: auto;
+  position: relative;
+  display: grid;
+  padding: 3rem 3rem 10rem 3rem;
+}
+.myProject .center {
+  user-select: none;
+  place-self: center;
+  padding: 3rem 0rem;
+}
+.myProject .center span:first-of-type {
+  font-size: 2.25rem;
+  grid-column: 1/2;
+  line-height: 0.75;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: center;
+  font-family: "Audiowide";
+}
+.myProject .center span:last-of-type {
+  grid-column: 2/4;
+  font-size: 5.625rem;
+  line-height: 0.75;
+  font-family: "Audiowide";
+}
+.myProject .projectList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+  text-align: center;
+  color: #E85A4F;
+  grid-gap: 2rem;
+  place-content: start space-evenly;
+}
+.myProject .projectList div {
+  background-color: #EAE7DC;
+  border-radius: 15px;
+  margin: 2rem;
+}
+.myProject .projectList div h2 {
+  color: #4f91e8;
+  transition: all 0.2s ease-out;
+}
+.myProject .projectList div h2 :hover {
+  color: #e8a74f;
+  transition: all 0.2s ease-out;
+}
+.myProject .projectList div h2 a {
+  text-decoration: underline;
+  color: #4f91e8;
+}
+.myProject .projectList div p {
+  margin: 0rem 1rem;
+  padding: 0rem 1rem;
+}
+
+footer {
+  background-color: #EAE7DC;
+  border-top: 5px dotted #4f91e8;
+  display: grid;
+  text-align: center;
+  height: auto;
+  color: #E85A4F;
+  place-content: center space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+}
+footer div {
+  display: grid;
+  padding: 1rem 0rem;
+}
+footer div.end {
+  user-select: none;
+}
+footer div.end div {
+  place-self: center;
+  width: auto;
+}
+footer div.end div span:first-of-type {
+  grid-column: 1/2;
+  font-size: 2.25rem;
+  line-height: 1;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: center;
+  font-family: "Permanent Marker";
+}
+footer div.end div span:last-of-type {
+  grid-column: 2/4;
+  font-size: 5.625rem;
+  line-height: 0.75;
+  font-family: "Audiowide";
+}
+footer div.info {
+  display: grid;
+  place-items: center;
+  text-transform: uppercase;
+  user-select: none;
+}
+footer div.info div {
+  grid-column: 1/4;
+  font-size: 3rem;
+  line-height: 0.75;
+  font-family: "Audiowide";
+}
+footer div.ty {
+  user-select: none;
+}
+footer div.ty div {
+  place-self: center;
+  width: auto;
+}
+footer div.ty div span:first-of-type {
+  grid-column: 1/3;
+  font-size: 5.625rem;
+  line-height: 0.75;
+  font-family: "Audiowide";
+}
+footer div.ty div span:last-of-type {
+  grid-column: 3/4;
+  font-size: 2.25rem;
+  line-height: 1;
+  writing-mode: vertical-lr;
+  transform: rotate(360deg);
+  font-family: "Permanent Marker";
+}
+
+.effect {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.75s;
+}
+
+.moveLeft {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: transform 0.75s;
+}
+
+.moveRight {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: transform 0.75s;
+}
+
+/*# sourceMappingURL=main.css.map */
