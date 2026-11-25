@@ -453,19 +453,19 @@ footer{
         }
     }
 }
-.effect {
+.reveal-ready .effect {
     opacity: 0;
     transform: translateY(100px);
     transition: transform 0.75s;
 }
 
-.moveLeft {
+.reveal-ready .moveLeft {
     opacity: 0;
     transform: translateX(100px);
     transition: transform 0.75s;
 }
 
-.moveRight {
+.reveal-ready .moveRight {
     opacity: 0;
     transform: translateX(-100px);
     transition: transform 0.75s;

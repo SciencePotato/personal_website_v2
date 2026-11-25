@@ -173,7 +173,7 @@ main .myName span:last-of-type a :hover {
   transition: all 0.3s linear;
 }
 main .myName span:last-of-type a :hover svg {
-  fill: #a3d3ff;
+  fill: rgb(163, 211, 255);
 }
 main .myName span:last-of-type a section {
   border-radius: 10px;
@@ -412,19 +412,19 @@ footer div.ty div span:last-of-type {
   font-family: "Permanent Marker";
 }
 
-.effect {
+.reveal-ready .effect {
   opacity: 0;
   transform: translateY(100px);
   transition: transform 0.75s;
 }
 
-.moveLeft {
+.reveal-ready .moveLeft {
   opacity: 0;
   transform: translateX(100px);
   transition: transform 0.75s;
 }
 
-.moveRight {
+.reveal-ready .moveRight {
   opacity: 0;
   transform: translateX(-100px);
   transition: transform 0.75s;
